@@ -3,13 +3,21 @@ defineProps({
   variant: { type: String, default: 'primary', validator: (value) => ['primary', 'secondary'].includes(value) },
   disabled: { type: Boolean, default: false },
   type: { type: String, default: 'button' },
+  href: { type: String, default: '' },
 })
 </script>
 
 <template>
-  <button class="ui-button" :class="`ui-button--${variant}`" :disabled="disabled" :type="type">
+  <component
+    :is="href ? 'a' : 'button'"
+    class="ui-button"
+    :class="`ui-button--${variant}`"
+    :href="href || undefined"
+    :disabled="href ? undefined : disabled"
+    :type="href ? undefined : type"
+  >
     <slot />
-  </button>
+  </component>
 </template>
 
 <style scoped>
