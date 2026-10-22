@@ -28,6 +28,7 @@ Do not replace the visual direction with a generic dashboard or a conventional p
 ### Visual Identity
 
 - Deep navy and near-black backgrounds.
+- Primary color: #112E59, #080A12, #ffffff
 - Subtle blue gradients and atmospheric lighting.
 - Bold, uppercase section headings.
 - White and light-gray text.
