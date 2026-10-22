@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import('../views/ExperiencesView.vue'),
     },
     {
+      path: '/beyond-codes',
+      name: 'beyond-codes',
+      component: () => import('../views/BeyondCodesView.vue'),
+    },
+    {
       path: '/styleguide',
       name: 'styleguide',
       component: () => import('../views/StyleguideView.vue'),

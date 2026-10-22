@@ -1,0 +1,17 @@
+export const tracks = [
+  { id: '10220', title: 'Tell Me', artists: ['Grizz Music', 'CapsCtrl'], duration: '2:27', year: 2020, platform: 'youtube', url: 'https://youtu.be/FrHsok1FdGc' },
+  { id: '20122', title: 'Mindless', artists: ['Grizz Music'], duration: '2:14', year: 2022, platform: 'youtube', url: 'https://youtu.be/W-7KAyXjpjc' },
+  { id: '30222', title: 'Fake Frnds', artists: ['Aisah Jihan', 'Grizz Music'], duration: '2:31', year: 2022, platform: 'youtube', url: 'https://youtu.be/LC3TDAFwfkE' },
+  { id: '40323', title: 'Bangkit Kawan (Grizz Remix)', artists: ['Ozi', 'Atuluxx', 'Grizz Music'], duration: '3:45', year: 2023, platform: 'spotify', url: 'https://open.spotify.com/track/1Oaalx5qRFeK2vUrwGjWWJ' },
+  { id: '50324', title: 'Datang Sesuka Hati', artists: ['Atuluxx', 'Grizz Music', 'Dijafu'], duration: '2:54', year: 2024, platform: 'spotify', url: 'https://open.spotify.com/track/45Nh1LwSpviSZ5hDWPFNUo' },
+  { id: '60224', title: 'Haha Boss', artists: ['Atuluxx', 'Grizz Music'], duration: '2:03', year: 2024, platform: 'youtube', url: 'https://youtu.be/ZTGaDAjLydY' },
+  { id: '70224', title: 'BERJANJI', artists: ['Atuluxx', 'Grizz Music'], duration: '2:06', year: 2024, platform: 'youtube', url: 'https://youtu.be/s_QGFHjbpXU' },
+  { id: '80224', title: 'SICK BOY', artists: ['Atuluxx', 'Grizz Music'], duration: '2:12', year: 2024, platform: 'spotify', url: 'https://open.spotify.com/track/0h3HfPOl6iBmJveXvK9qc7' },
+  { id: '90224', title: 'Nona baik', artists: ['Atuluxx', 'Grizz Music'], duration: '2:30', year: 2024, platform: 'spotify', url: 'https://open.spotify.com/track/7bqBbJADu3yKuAgzLmwn1k' },
+  { id: '100225', title: 'SESAAT', artists: ['Atuluxx', 'Grizz Music'], duration: '3:02', year: 2025, platform: 'spotify', url: 'https://open.spotify.com/track/2quX0211pj345i9kkGbqPy' },
+  { id: '100325', title: 'SESAAT RMX', artists: ['Atuluxx', 'Grizz Music', 'Hyperion'], duration: '2:36', year: 2025, platform: 'spotify', url: 'https://open.spotify.com/track/53Ph4FmxsQQuEgSKWKxVAJ' },
+  { id: '110425', title: 'Realita', artists: ['Fahra Fidriana', 'Atuluxx', 'SULTAN', 'Grizz Music'], duration: '3:40', year: 2025, platform: 'spotify', url: 'https://open.spotify.com/track/1EHwDyYD4PdJDEEQwt3lx0' },
+  { id: '120326', title: 'TERGILA GILA', artists: ['Chaerys', 'Atuluxx', 'Grizz Music'], duration: '2:31', year: 2026, platform: 'spotify', url: 'https://open.spotify.com/track/6gsL1YkHdXrgUldlnjuLOc' },
+  { id: '130226', title: 'BISAKAH KITA?', artists: ['Atuluxx', 'Grizz Music'], duration: '2:36', year: 2026, platform: 'spotify', url: 'https://open.spotify.com/track/3Twu8dVSnNsocAsqzCIkbF' },
+  { id: '140226', title: 'Terombang Ambing', artists: ['Atuluxx', 'Grizz Music'], duration: '1:55', year: 2026, platform: 'youtube', url: 'https://youtu.be/qpd4TxQQb1Q' },
+]

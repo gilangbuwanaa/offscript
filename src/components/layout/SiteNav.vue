@@ -23,6 +23,7 @@ const closeMenu = () => { menuOpen.value = false }
     <nav id="site-navigation" class="navigation" :class="{ 'navigation--open': menuOpen }" aria-label="Main navigation">
       <RouterLink to="/" @click="closeMenu">Home</RouterLink>
       <RouterLink to="/experiences" @click="closeMenu">Experiences</RouterLink>
+      <RouterLink to="/beyond-codes" @click="closeMenu">Beyond Codes</RouterLink>
       <RouterLink to="/about" @click="closeMenu">About</RouterLink>
       <RouterLink v-if="showStyleguide" to="/styleguide" @click="closeMenu">Styleguide</RouterLink>
       <a v-if="showContact" class="contact-link" href="#contact" @click="closeMenu">Let's chat</a>
