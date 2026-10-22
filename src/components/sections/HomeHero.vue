@@ -11,7 +11,7 @@ import UiButton from '../ui/UiButton.vue'
     <PageContainer>
       <div class="hero-card">
         <div class="hero-copy">
-          <p class="hero-role">Full-stack developer <span>// Jack-of-all-trades</span></p>
+          <p class="hero-role">Developer &amp; Creative Technologist</p>
           <h1 id="home-title">Gilang Andhika<br />Buwana</h1>
           <p class="hero-description">
             An Informatics Engineering graduate who enjoys exploring technology, experimenting with creative work, and building things.

@@ -1,13 +1,15 @@
 <script setup>
-import { PhCode, PhPalette } from '@phosphor-icons/vue'
+import { PhFigmaLogo, PhGithubLogo, PhNotionLogo } from '@phosphor-icons/vue'
 import GlassCard from '../ui/GlassCard.vue'
 import PageContainer from '../ui/PageContainer.vue'
 import SectionHeading from '../ui/SectionHeading.vue'
+import { tools } from '../../data/home.js'
 
-const categories = [
-  { title: 'Development tools', Icon: PhCode },
-  { title: 'Creative tools', Icon: PhPalette },
-]
+const brandIcons = {
+  figma: PhFigmaLogo,
+  github: PhGithubLogo,
+  notion: PhNotionLogo,
+}
 </script>
 
 <template>
@@ -15,9 +17,20 @@ const categories = [
     <PageContainer>
       <SectionHeading id="tools-title" eyebrow="Toolkit" :level="2">Tools I work with</SectionHeading>
       <div class="tool-categories">
-        <GlassCard v-for="category in categories" :key="category.title" class="tool-card">
-          <component :is="category.Icon" :size="28" weight="duotone" aria-hidden="true" />
-          <div><h3>{{ category.title }}</h3><p>Items will be added after the tool list is confirmed.</p></div>
+        <GlassCard v-for="category in tools" :key="category.category" class="tool-card">
+          <h3>{{ category.category }}</h3>
+          <ul class="tool-list" :aria-label="category.category">
+            <li v-for="tool in category.items" :key="typeof tool === 'string' ? tool : tool.name" class="tool-item">
+              <component
+                :is="brandIcons[tool.brandIcon]"
+                v-if="typeof tool !== 'string' && tool.brandIcon"
+                :size="17"
+                weight="regular"
+                aria-hidden="true"
+              />
+              <span>{{ typeof tool === 'string' ? tool : tool.name }}</span>
+            </li>
+          </ul>
         </GlassCard>
       </div>
     </PageContainer>
@@ -28,10 +41,12 @@ const categories = [
 .tools-section { position: relative; padding: 0 0 var(--space-section); text-align: center; }
 .tools-section :deep(.section-heading) { justify-items: center; }
 .tools-section :deep(.heading) { max-width: none; }
-.tool-categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
-.tool-card { display: flex; min-height: 8rem; align-items: center; gap: var(--space-4); padding: var(--space-6); text-align: left; }
-.tool-card :deep(svg) { flex: 0 0 auto; color: #8cb8f1; }
-.tool-card h3 { margin: 0; font-size: var(--font-size-base); font-weight: 750; }
-.tool-card p { margin: var(--space-1) 0 0; color: var(--color-muted); font-size: var(--font-size-xs); }
+.tool-categories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-8); text-align: left; }
+.tool-card { min-width: 0; padding: var(--space-4); }
+.tool-card h3 { margin: 0 0 var(--space-3); color: #dbe8f9; font-size: var(--font-size-sm); font-weight: 750; }
+.tool-list { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.tool-item { display: inline-flex; min-height: 2rem; align-items: center; gap: 0.35rem; border: 1px solid rgb(255 255 255 / 19%); border-radius: var(--radius-pill); padding: 0.3rem 0.65rem; color: #e7edf7; background: rgb(7 14 25 / 32%); font-size: var(--font-size-xs); line-height: 1.2; }
+.tool-item :deep(svg) { color: #a8c9f5; }
+@media (max-width: 900px) { .tool-categories { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .tool-categories { grid-template-columns: 1fr; } }
 </style>
